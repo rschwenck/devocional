@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortalecendo a Fé em Tempos Difíceis | Devocional de 30 Dias</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(0, 51, 153, 0.8), rgba(0, 51, 153, 0.9)), url('https://images.unsplash.com/photo-1467770289101-3d3cea1e6b92?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        .benefits {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        .benefits h3 {
+            font-size: 1.8rem;
+            color: #003399;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .benefit-item {
+            text-align: center;
+            padding: 20px;
+        }
+        .benefit-item i {
+            font-size: 40px;
+            color: #003399;
+            margin-bottom: 15px;
+        }
+        .benefit-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #003399;
+        }
+        .testimonial {
+            background-color: #003399;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .testimonial::before {
+            content: '"';
+            font-size: 120px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+        .testimonial p {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+        }
+        .testimonial .author {
+            font-weight: bold;
+            text-align: right;
+        }
+        .cta {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        .cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #003399;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #003399;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #002266;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .btn-secondary {
+            background-color: #ffa500;
+        }
+        .btn-secondary:hover {
+            background-color: #ff8c00;
+        }
+        .header-cta {
+            margin-top: 30px;
+        }
+        .product {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-bottom: 40px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .product-info {
+            padding: 40px;
+        }
+        .product-image {
+            text-align: center;
+            background-color: #f1f5ff;
+            padding: 40px;
+            position: relative;
+        }
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .product-cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .features {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .features h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #003399;
+        }
+        .feature-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        .feature-list li {
+            padding: 10px 0;
+            font-size: 1.1rem;
+        }
+        .feature-list li::before {
+            content: "✅";
+            margin-right: 10px;
+        }
+        .features-cta {
+            text-align: center;
+        }
+        .faq {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .faq h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #003399;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .faq-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #003399;
+        }
+        .faq-cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .final-message {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: #003399;
+        }
+        .final-cta {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background-color: #f1f5ff;
+            border-radius: 10px;
+        }
+        .final-cta h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: #003399;
+        }
+        .price-tag {
+            background-color: #ffa500;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 15px 0;
+        }
+        .countdown {
+            font-size: 1.1rem;
+            color: #cc0000;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .ribbon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+        }
+        .ribbon-content {
+            position: absolute;
+            display: block;
+            width: 225px;
+            padding: 15px 0;
+            background-color: #ffa500;
+            box-shadow: 0 5px 10px rgba(0,0,0,.1);
+            color: #fff;
+            font-size: 1rem;
+            text-shadow: 0 1px 1px rgba(0,0,0,.2);
+            text-align: center;
+            font-weight: bold;
+            top: 35px;
+            right: -50px;
+            transform: rotate(45deg);
+        }
+        @media (min-width: 768px) {
+            .product {
+                flex-direction: row;
+                align-items: center;
+            }
+            .product-info, .product-image {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quando Deus Parece Silencioso, Ele Está Mais Perto do Que Nunca</h1>
+            <h2>30 dias que vão fortalecer sua fé, restaurar sua esperança e renovar sua alma mesmo nos momentos mais sombrios da vida</h2>
+            <div class="header-cta">
+                <a href="https://bit.ly/devocional_fort_fe" class="btn">QUERO FORTALECER MINHA FÉ AGORA</a>
+            </div>
+        </header>
+
+        <div class="benefits">
+            <h3>Por que este devocional vai transformar seu momento de dificuldade</h3>
+            <p style="text-align: center; margin-bottom: 20px;">Criado especialmente para quem está atravessando vales escuros, enfrentando desafios aparentemente insuperáveis, ou simplesmente precisando sentir a presença de Deus mais próxima.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i>🌱</i>
+                    <h4>Superação Diária</h4>
+                    <p>A cada reflexão, você descobrirá como transformar suas lágrimas em sementes de esperança e como encontrar força quando suas próprias forças acabarem.</p>
+                </div>
+                <div class="benefit-item">
+                    <i>⚓</i>
+                    <h4>Fé Prática</h4>
+                    <p>Não apenas palavras de conforto, mas passos concretos para aplicar a Palavra em seu dia a dia, ancorando sua vida nas promessas eternas.</p>
+                </div>
+                <div class="benefit-item">
+                    <i>✨</i>
+                    <h4>Transformação Interior</h4>
+                    <p>Testemunhe sua própria transformação ao longo dos 30 dias, enquanto seu coração é renovado e sua perspectiva restaurada pela presença divina.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://bit.ly/devocional_fort_fe" class="btn">QUERO INICIAR MINHA JORNADA DE 30 DIAS</a>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <p>"Quando recebi o diagnóstico que mudaria toda a minha vida, senti como se o chão tivesse desaparecido. Nos meses que se seguiram, descobri que não poderia mais andar, mas Deus me ensinou a permanecer de pé pela fé. Foi durante meus momentos mais sombrios que comecei a escrever estas reflexões – não como alguém que tem todas as respostas, mas como alguém que encontrou a única resposta que importa: o amor inabalável de Cristo."</p>
+            <div class="author">- Do coração do autor para o seu</div>
+        </div>
+
+        <div class="product">
+            <div class="product-info">
+                <h3>O que você vai encontrar neste devocional de 30 dias</h3>
+                <p>Cada dia deste devocional foi cuidadosamente preparado para ser um ponto de encontro entre seu coração ferido e o coração amoroso de Deus. Não são apenas palavras bonitas, mas experiências reais de alguém que caminhou pelo vale da sombra e encontrou luz.</p>
+                <p style="margin-top: 15px;">As reflexões são curtas o suficiente para caber na sua rotina diária, mas profundas o bastante para nutrir sua alma quando mais precisar. Pense neste devocional como um amigo fiel que estará ao seu lado, dia após dia, lembrando-o das verdades eternas quando o mundo ao redor parece desmoronar.</p>
+                
+                <div class="product-cta">
+                    <a href="https://bit.ly/devocional_fort_fe" class="btn">QUERO TER ESTE DEVOCIONAL</a>
+                </div>
+            </div>
+            <div class="product-image">
+                <div class="ribbon">
+                    <span class="ribbon-content">LANÇAMENTO</span>
+                </div>
+                <img src="Capa.jpg" alt="Capa do e-book Devocional 'Fortalecendo a Fé em Tempos Difíceis'">
+            </div>
+        </div>
+
+        <div class="features">
+            <h3>O que você recebe neste devocional</h3>
+            <ul class="feature-list">
+                <li>Leitura diária com reflexão bíblica profunda e aplicável à sua situação atual</li>
+                <li>Oração pronta para cada dia, guiando seu coração quando as palavras parecem faltar</li>
+                <li>Acesso instantâneo no celular ou computador, para levar conforto aonde você estiver</li>
+                <li>Ideal para quem está sofrendo com perdas, doenças, crises financeiras ou emocionais</li>
+                <li>Linguagem acessível que fala diretamente ao coração, sem jargões religiosos</li>
+                <li>Versículos poderosos selecionados especificamente para momentos de provação</li>
+                <li>Espaço para anotações pessoais, transformando o devocional em seu diário de fé</li>
+            </ul>
+            
+            <div class="features-cta">
+                <a href="https://bit.ly/devocional_fort_fe" class="btn">QUERO TODOS ESTES BENEFÍCIOS</a>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h3>Comece hoje essa jornada de 30 dias e experimente o cuidado de Deus de perto</h3>
+            <p>Não permita que mais um dia se passe sem o conforto e a direção que sua alma precisa. Este pode ser o ponto de virada que você está buscando.</p>
+            <a href="https://bit.ly/devocional_fort_fe" class="btn">RECEBER MEU DEVOCIONAL AGORA</a>
+        </div>
+
+        <div class="faq">
+            <h3>Perguntas Frequentes</h3>
+            
+            <div class="faq-item">
+                <h4>Preciso ser cristão para acompanhar este devocional?</h4>
+                <p>Este devocional foi escrito com o coração voltado para cristãos que estão enfrentando dificuldades, mas é acessível a qualquer pessoa aberta a buscar conforto e esperança nas verdades bíblicas, independente de sua jornada espiritual atual.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Quantos minutos por dia preciso dedicar à leitura?</h4>
+                <p>Cada reflexão diária foi projetada para ser lida em aproximadamente 10-15 minutos, incluindo o tempo para ler o texto bíblico, a meditação e a oração. No entanto, recomendamos reservar alguns minutos adicionais para reflexão pessoal.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>A leitura é fácil de compreender?</h4>
+                <p>Sim, o devocional foi escrito em linguagem simples e acessível, evitando terminologias complexas. As reflexões são profundas, mas apresentadas de forma que qualquer pessoa possa compreender e aplicar em sua vida.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>O devocional funciona para qualquer tipo de dificuldade?</h4>
+                <p>As reflexões abordam uma ampla gama de dificuldades humanas – desde luto e doença até crises financeiras, relacionamentos quebrados e períodos de seca espiritual. Os princípios bíblicos apresentados são universais e aplicáveis a diversos contextos de sofrimento.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Como recebo o material após a compra?</h4>
+                <p>Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link para download do e-book em formato PDF, que pode ser lido em qualquer dispositivo (computador, tablet ou smartphone).</p>
+            </div>
+            
+            <div class="faq-cta">
+                <a href="https://bit.ly/devocional_fort_fe" class="btn">QUERO ADQUIRIR O DEVOCIONAL</a>
+            </div>
+        </div>
+
+        <div class="final-message">
+            <p>"Obrigado por caminhar comigo nessa jornada. Que Deus fortaleça sua fé a cada página."</p>
+        </div>
+        
+        <div id="comprar" class="final-cta">
+            <h3>Fortalecendo a Fé em Tempos Difíceis - Devocional de 30 Dias</h3>
+            <p>Transforme seu vale de lágrimas em um manancial de bênçãos com este devocional especial</p>
+            
+            <div class="price-tag">
+                R$ 19,99
+            </div>
+            
+            
+            
+            <div class="countdown">
+                Oferta especial: 50% de desconto por tempo limitado!
+            </div>
+            
+            <a href="https://bit.ly/devocional_fort_fe" class="btn btn-secondary">COMPRAR AGORA COM DESCONTO</a>
+            
+            <p style="margin-top: 15px; font-size: 0.9rem;">Pagamento 100% seguro | Acesso imediato após confirmação</p>
+        </div>
+    </div>
+    
+    <div class="floating-button">
+        <a href="https://bit.ly/devocional_fort_fe" class="btn btn-secondary">COMPRAR COM DESCONTO</a>
+    </div>
+</body>
+</html>
