@@ -270,6 +270,10 @@
             z-index: 100;
             animation: pulse 2s infinite;
         }
+        .floating-button .btn {
+            font-size: 1rem;
+            padding: 10px 20px;
+        }
         @keyframes pulse {
             0% {
                 transform: scale(1);
@@ -340,6 +344,59 @@
             background-color: #ffff00;
             padding: 3px 5px;
             font-weight: bold;
+        }
+        .testimonials-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .testimonials-section h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #003399;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .testimonial-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 25px;
+            position: relative;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-card::before {
+            content: '"';
+            font-size: 60px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            opacity: 0.1;
+            font-family: Georgia, serif;
+        }
+        .testimonial-text {
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+        .testimonial-author {
+            font-weight: bold;
+            color: #003399;
+        }
+        .testimonial-details {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .small-note {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 5px;
         }
         @media (min-width: 768px) {
             .product {
@@ -445,6 +502,34 @@
             </div>
         </div>
 
+        <div class="testimonials-section">
+            <h3>O que dizem as pessoas que já foram abençoadas por este devocional</h3>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Estava passando pela separação mais dolorosa da minha vida quando uma amiga me presenteou com este devocional. A cada dia, sentia como se as palavras tivessem sido escritas especialmente para mim. No 30º dia, percebi que Deus havia restaurado minha esperança completamente!</p>
+                    <p class="testimonial-author">Maria S.</p>
+                    <p class="testimonial-details">São Paulo, SP</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Após o diagnóstico de câncer, minha fé estava abalada. Este devocional me ajudou a reconectar com Deus diariamente, mesmo nos dias de tratamento mais difíceis. As reflexões são profundas, mas tão acessíveis que até nos momentos de maior fraqueza conseguia absorver a mensagem.</p>
+                    <p class="testimonial-author">Carlos R.</p>
+                    <p class="testimonial-details">Belo Horizonte, MG</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Perdi meu emprego durante a pandemia e entrei em uma crise financeira que me levou à depressão. Este devocional, junto com o plano de leitura bíblica, me deu a disciplina espiritual que eu precisava para reconstruir não só minha vida financeira, mas principalmente minha confiança em Deus.</p>
+                    <p class="testimonial-author">Patrícia L.</p>
+                    <p class="testimonial-details">Recife, PE</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://bit.ly/devocional_fort_fe" class="btn">QUERO TRANSFORMAR MINHA VIDA TAMBÉM</a>
+            </div>
+        </div>
+
         <div class="cta">
             <h3>Comece hoje essa jornada de 30 dias e experimente o cuidado de Deus de perto</h3>
             <p>Não permita que mais um dia se passe sem o conforto e a direção que sua alma precisa. Este pode ser o ponto de virada que você está buscando.</p>
@@ -509,7 +594,8 @@
                 R$ 29,90
             </div>
             
-            <p>ou 3x de R$ 10,67* no cartão</p>
+            <p>ou 3x de R$ 10,67*</p>
+            <p class="small-note">*juros de parcelamento inclusos</p>
             
             <div class="countdown">
                 Oferta especial: 50% de desconto por tempo limitado!
@@ -522,7 +608,7 @@
     </div>
     
     <div class="floating-button">
-        <a href="https://bit.ly/devocional_fort_fe" class="btn btn-secondary">COMPRAR COM DESCONTO + BÔNUS</a>
+        <a href="https://bit.ly/devocional_fort_fe" class="btn btn-secondary">COMPRAR AGORA</a>
     </div>
 </body>
 </html>
